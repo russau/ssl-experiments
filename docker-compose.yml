@@ -4,9 +4,8 @@ services:
   nginx:
     image: nginx:1.15-alpine
     restart: unless-stopped
-    network_mode: host
     volumes:
-      - ./certs:/certs 
+      - ./certs:/certs
       - ./html:/html
       - ./data/conf.d:/etc/nginx/conf.d
     ports:
